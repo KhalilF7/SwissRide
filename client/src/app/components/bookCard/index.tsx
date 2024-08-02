@@ -11,7 +11,6 @@ import { Button } from "../button";
 import { Marginer } from "../marginer";
 
 import Calendar from "react-calendar";
-import fr from 'react-calendar';
 import "react-calendar/dist/Calendar.css";
 import { SCREENS } from "../responsive";
 
@@ -130,7 +129,7 @@ export function BookCard() {
           />
         </SmallIcon>
         {isStartCalendarOpen && (
-          <DateCalendar value={startDate} onChange={setStartDate as any} locale={fr} />
+          <DateCalendar value={startDate} onChange={setStartDate as any} />
         )}
       </ItemContainer>
       <LineSeperator />
