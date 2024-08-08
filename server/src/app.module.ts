@@ -14,8 +14,8 @@ import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
     DatabaseModule,
     GraphQLModule.forRoot<ApolloDriverConfig>({
       driver: ApolloDriver,
-      playground: process.env.NODE_ENV === "development" && true || false,
-      debug: process.env.NODE_ENV === "development" && true || false,
+      playground: true,
+      debug: true,
       autoSchemaFile: true,
     }),
     ComponentsModule,
