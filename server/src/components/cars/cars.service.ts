@@ -3,6 +3,7 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 //import { NewCarInput } from './dto/new-car.input';
 import { Car } from './entities/car';
+import { NewCarInput } from './dto/new-car.input';
 
 @Injectable()
 export class CarsService {
@@ -14,12 +15,12 @@ export class CarsService {
     });
   }
 
-  /*public async addCar(newCarData: NewCarInput): Promise<Car> {
+  public async addCar(newCarData: NewCarInput): Promise<Car> {
     const newCar = this.carRepository.create(newCarData);
     await this.carRepository.save(newCar).catch((err) => {
       new InternalServerErrorException();
     });
 
     return newCar;
-  }*/
+  }
 }
