@@ -7,7 +7,7 @@ const dbConfig = require("../../ormconfig.json");
 @Module({
   imports: [TypeOrmModule.forRoot({
     ...dbConfig,
-    type: 'mysql', // Use the standard mysql driver
+    type: 'mysql',
   }),],
   exports: [TypeOrmModule],
 })
